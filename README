@@ -1,0 +1,28 @@
+---
+ocl
+---
+A *very* simple interface to the OpenCL compilers your system has.
+Written in C.
+
+You would most likely be better served by using clcc, which can be found at
+http://clcc.sourceforge.net/
+
+------------------
+Where you got this
+------------------
+http://danpburke.blogspot.com.au/2012/02/opencl-compilation-tool.html
+   or
+https://github.com/burito/ocl
+
+------------
+Who to blame
+------------
+Daniel Burke - dan.p.burke@gmail.com
+
+-----
+Legal
+-----
+Copyright (c) 2012 Daniel Burke
+Please see the enclosed LICENSE file for details.
+It's the simplified BSD license.
+
