@@ -134,6 +134,7 @@ char* loadTextFile(char *filename)
 	char *buf;
 
 	fptr = fopen(filename, "rb");
+	if(!fptr)return 0;
 	stat(filename, &stbuf);
 	size = stbuf.st_size;
 	buf = malloc(size+1);
@@ -260,6 +261,10 @@ int build(int dev, char *filename)
 	}
 
 	source = loadTextFile(filename);
+	if(!source) {
+		printf("fopen(\"%s\") failed\n", filename);
+		goto build_cid;
+	}
 	src_len = strlen(source);
 
 	program = clCreateProgramWithSource(context, 1, &source, &src_len, &ret);
